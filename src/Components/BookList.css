@@ -1,31 +1,45 @@
+/* Grid styling (already exists in your file) */
 .book-list {
   display: grid;
-  grid-template-columns: 1fr; /* default: xs/sm → 1 item */
+  grid-template-columns: 1fr;
   gap: 20px;
-  /* padding: 20px; */
-  margin-left: 100px;
 }
 
-/* Medium screens ≥768px → 2 items in a row */
 @media (min-width: 768px) {
   .book-list {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-/* Large screens ≥1024px → 3 items in a row */
 @media (min-width: 1024px) {
   .book-list {
     grid-template-columns: repeat(4, 1fr);
   }
 }
 
-/* Optional: hover effect for each card */
-.book-list > * {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+/* ===============================
+   No Data Found Styling
+   =============================== */
+.no-data {
+  text-align: center;
+  padding: 60px 20px;
+  background: #f9fafb;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+  margin: 30px auto;
+  max-width: 600px;
 }
 
-.book-list > *:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+.no-data h2 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  background: linear-gradient(90deg, #4f46e5, #9333ea, #ec4899);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.no-data p {
+  font-size: 16px;
+  color: #555;
 }

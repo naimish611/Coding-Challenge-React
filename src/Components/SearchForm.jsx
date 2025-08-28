@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
-import { searchBooks } from '../Components/api/googleBooks';
-import BookList from '../Components/BookList';
+import React, { useState } from "react";
+import { searchBooks } from "../Components/api/googleBooks";
+import BookList from "../Components/BookList";
+import "./SearchForm.css"; // External CSS file
 
 function SearchForm() {
-  const [fields, setFields] = useState({ title: '', author: '', genre: '' });
-  const [error, setError] = useState('');
+  const [fields, setFields] = useState({ title: "", author: "", genre: "" });
+  const [error, setError] = useState("");
   const [books, setBooks] = useState([]);
   const [loading, setLoading] = useState(false);
 
@@ -14,11 +15,15 @@ function SearchForm() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!fields.title && !fields.author && !fields.genre) {
-      setError('Please enter at least one field.');
+
+    // Check if all fields are empty
+    const emptyFields = Object.keys(fields).filter((key) => !fields[key].trim());
+    if (emptyFields.length === 3) {
+      setError("Please enter at least one field.");
       return;
     }
-    setError('');
+
+    setError("");
     setLoading(true);
     const results = await searchBooks(fields);
     setBooks(results);
@@ -26,43 +31,56 @@ function SearchForm() {
   };
 
   return (
-    <section>
-      <form onSubmit={handleSubmit} aria-label="Book search form">
-       <div className="book-form">
-  <input
-    type="text"
-    name="title"
-    placeholder="Title"
-    value={fields.title}
-    onChange={handleInput}
-    aria-label="Book title"
-    className="form-input"
-  />
-  <input
-    type="text"
-    name="author"
-    placeholder="Author"
-    value={fields.author}
-    onChange={handleInput}
-    aria-label="Book author"
-    className="form-input"
-  />
-  <input
-    type="text"
-    name="genre"
-    placeholder="Genre/Keyword"
-    value={fields.genre}
-    onChange={handleInput}
-    aria-label="Book genre or keyword"
-    className="form-input"
-  />
-</div>
+    <section className="search-section">
+      <form onSubmit={handleSubmit} aria-label="Book search form" className="search-form">
+        <h2 className="form-title">Search Books</h2>
 
-        <button type="submit">Search</button>
-        {error && <div role="alert">{error}</div>}
+        <div className="form-inputs">
+          <input
+            type="text"
+            name="title"
+            placeholder="Title"
+            value={fields.title}
+            onChange={handleInput}
+            aria-label="Book title"
+            className={error && !fields.title ? "input-error" : ""}
+          />
+          <input
+            type="text"
+            name="author"
+            placeholder="Author"
+            value={fields.author}
+            onChange={handleInput}
+            aria-label="Book author"
+            className={error && !fields.author ? "input-error" : ""}
+          />
+          <input
+            type="text"
+            name="genre"
+            placeholder="Genre/Keyword"
+            value={fields.genre}
+            onChange={handleInput}
+            aria-label="Book genre or keyword"
+            className={error && !fields.genre ? "input-error" : ""}
+          />
+        </div>
+
+        <button type="submit" className="btn-search">
+          Search
+        </button>
+
+        {error && (
+          <div role="alert" className="error-msg">
+            {error}
+          </div>
+        )}
       </form>
-      {loading && <div>Loading...</div>}
-      <BookList books={books} />
+
+      {loading && <div className="loading">Loading...</div>}
+
+      <div className="book-results">
+        <BookList books={books} />
+      </div>
     </section>
   );
 }
