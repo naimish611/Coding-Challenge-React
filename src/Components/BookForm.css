@@ -1,37 +1,37 @@
 .book-form {
   display: flex;
   flex-direction: column;
-  gap: 15px; /* spacing between inputs */
+  gap: 15px; 
   max-width: 500px;
   margin: 20px auto;
 }
 
-/* Input Field Style */
+
 .form-input {
   padding: 12px 15px;
-  border: 1px solid #d1d5db; /* light gray */
+  border: 1px solid #d1d5db;
   border-radius: 8px;
   font-size: 15px;
-  color: #111827; /* dark text */
-  background: #f9fafb; /* light bg */
+  color: #111827; 
+  background: #f9fafb;
   transition: all 0.3s ease;
 }
 
-/* Placeholder */
+
 .form-input::placeholder {
-  color: #6b7280; /* muted gray */
+  color: #6b7280; 
   font-size: 14px;
 }
 
-/* Focus Effect */
+
 .form-input:focus {
   outline: none;
-  border-color: #2563eb; /* blue */
+  border-color: #2563eb;
   background: #ffffff;
-  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2); /* blue glow */
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2); 
 }
 
-/* Responsive (side by side for larger screens) */
+
 @media (min-width: 768px) {
   .book-form {
     flex-direction: row;
@@ -39,6 +39,6 @@
   }
 
   .form-input {
-    flex: 1; /* equal width */
+    flex: 1; 
   }
 }

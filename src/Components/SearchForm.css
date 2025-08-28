@@ -1,4 +1,4 @@
-/* General Section */
+
 .search-section {
   display: flex;
   flex-direction: column;
@@ -8,7 +8,7 @@
   min-height: 100vh;
 }
 
-/* Form */
+
 .search-form {
   width: 100%;
   max-width: 800px;
@@ -24,14 +24,14 @@
   font-weight: bold;
   margin-bottom: 25px;
 
-  /* Gradient text */
+  
   background: linear-gradient(90deg, #4f46e5, #9333ea, #ec4899);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-clip: text; /* for firefox */
+  background-clip: text;
 }
 
-/* Inputs */
+
 .form-inputs {
   display: grid;
   grid-template-columns: 1fr;
@@ -47,19 +47,19 @@
   transition: border 0.2s ease, box-shadow 0.2s ease;
 }
 
-/* Focus style */
+
 .form-inputs input:focus {
   border-color: #4f46e5;
   outline: none;
 }
 
-/* Red border for error */
+
 .input-error {
-  border-color: #e11d48; /* red */
+  border-color: #e11d48;
   box-shadow: 0 0 5px rgba(225, 29, 72, 0.5);
 }
 
-/* Button */
+
 .btn-search {
   width: 100%;
   padding: 12px;
@@ -76,7 +76,6 @@
   background: #4338ca;
 }
 
-/* Error & Loading */
 .error-msg {
   margin-top: 10px;
   text-align: center;
@@ -91,14 +90,14 @@
   font-weight: 500;
 }
 
-/* Results Section */
+
 .book-results {
   width: 100%;
   max-width: 1100px;
   margin-top: 30px;
 }
 
-/* Responsive */
+
 @media (min-width: 640px) {
   .form-inputs {
     grid-template-columns: repeat(3, 1fr);

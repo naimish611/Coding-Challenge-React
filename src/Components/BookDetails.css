@@ -1,11 +1,11 @@
-/* Container */
+
 .book-details-container {
   padding: 20px;
   display: flex;
   justify-content: center;
 }
 
-/* Card Layout */
+
 .book-details-card {
   display: flex;
   flex-direction: column;
@@ -18,7 +18,7 @@
   animation: fadeInUp 0.6s ease-in-out;
 }
 
-/* Image Section */
+
 .book-image {
   flex: 1;
   display: flex;
@@ -39,7 +39,7 @@
   transform: scale(1.05);
 }
 
-/* Info Section */
+
 .book-info {
   flex: 2;
   padding: 20px;
@@ -65,7 +65,7 @@
   line-height: 1.6;
 }
 
-/* Buttons */
+
 .btn-fav,
 .btn-remove {
   padding: 10px 16px;
@@ -94,7 +94,7 @@
   background: #fecaca;
 }
 
-/* Responsive Design */
+
 @media (min-width: 768px) {
   .book-details-card {
     flex-direction: row;
@@ -116,7 +116,7 @@
   }
 }
 
-/* Loading / Not Found */
+
 .loading,
 .not-found {
   font-size: 18px;
@@ -125,7 +125,7 @@
   color: #6b7280;
 }
 
-/* Animations */
+
 @keyframes fadeInUp {
   from {
     opacity: 0;

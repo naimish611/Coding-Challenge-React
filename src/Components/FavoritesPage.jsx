@@ -10,7 +10,7 @@ const FavoritesPage = () => {
     <section>
       <h2 className="favorites-title">Your Favorites</h2>
       {favorites.length === 0 ? (
-        <p className="favorites-empty">No favorites added yet ❤️</p>
+        <p className="favorites-empty">No favorites added yet</p>
       ) : (
         <BookList books={favorites} />
       )}

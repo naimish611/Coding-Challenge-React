@@ -1,4 +1,4 @@
-/* Base Navbar */
+
 .navbar {
   background: #4f46e5;
   color: white;
@@ -24,7 +24,7 @@
   text-decoration: none;
 }
 
-/* Desktop Nav Links */
+
 .nav-links-desktop ul {
   list-style: none;
   display: flex;
@@ -43,7 +43,7 @@
   color: #c7d2fe;
 }
 
-/* Hamburger */
+
 .nav-toggle {
   background: none;
   border: none;
@@ -53,7 +53,7 @@
   display: none;
 }
 
-/* Mobile Modal */
+
 .nav-modal {
   position: fixed;
   top: 0;
@@ -96,12 +96,12 @@
   cursor: pointer;
 }
 
-/* Responsive Behavior */
+
 @media (max-width: 992px) {
   .nav-links-desktop {
-    display: none; /* Hide normal links */
+    display: none;
   }
   .nav-toggle {
-    display: block; /* Show hamburger */
+    display: block;
   }
 }

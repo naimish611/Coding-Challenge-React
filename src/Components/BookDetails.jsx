@@ -29,7 +29,7 @@ const BookDetails = () => {
   return (
     <div className="book-details-container">
       <div className="book-details-card">
-        {/* Image */}
+        
         <div className="book-image">
           <img
             src={info.imageLinks?.thumbnail}
@@ -38,7 +38,7 @@ const BookDetails = () => {
           />
         </div>
 
-        {/* Content */}
+       
         <div className="book-info">
           <h1 className="book-title">{info.title}</h1>
           <p className="book-authors">

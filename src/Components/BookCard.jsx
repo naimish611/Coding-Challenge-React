@@ -13,12 +13,12 @@ function BookCard({ book }) {
 
   return (
     <div className="book-card">
-      {/* Book Image */}
+    
       <div className="book-image">
         {img ? <img src={img} alt={title} /> : <span>No Image</span>}
       </div>
 
-      {/* Content */}
+      
       <div className="book-content">
         <h3 className="book-title">{title}</h3>
         <p className="book-authors">

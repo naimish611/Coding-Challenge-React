@@ -8,7 +8,7 @@ function NavBar() {
   return (
     <header className="navbar">
       <div className="nav-container">
-        {/* Logo with Book SVG */}
+       
         <div className="nav-logo">
           <Link to="/" className="logo-link">
            
@@ -16,7 +16,7 @@ function NavBar() {
           </Link>
         </div>
 
-        {/* Hamburger */}
+     
         <button
           className="nav-toggle"
           onClick={() => setMenuOpen(true)}
@@ -25,7 +25,7 @@ function NavBar() {
           ☰
         </button>
 
-        {/* Desktop Navigation */}
+       
         <nav className="nav-links-desktop">
           <ul>
             <li>
@@ -38,7 +38,7 @@ function NavBar() {
         </nav>
       </div>
 
-      {/* Mobile Modal */}
+      
       {menuOpen && (
         <div className="nav-modal">
           <div className="nav-modal-content">
