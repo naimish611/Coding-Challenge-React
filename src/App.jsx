@@ -3,7 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 import NavBar from './Components/NavBar';
 import SearchPage from './components/SearchForm';
 import FavoritesPage from './components/FavoritesPage';
-
+import NotFound from './components/NotFound';
 const BookDetails = lazy(() => import('./components/BookDetails'));
 
 function App() {
@@ -22,6 +22,7 @@ function App() {
             }
           />
           <Route path="/favorites" element={<FavoritesPage />} />
+           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
     </>
