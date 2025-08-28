@@ -1,13 +1,12 @@
 import React from "react";
 import BookCard from "./BookCard";
-import "./BookList.css"; // external CSS
+import "./BookList.css";
 
 function BookList({ books }) {
   if (!books || books.length === 0)
     return (
       <div className="no-data">
-        <h2>No Results Found 📚</h2>
-        <p>Try searching with a different keyword or explore your favorites.</p>
+        <h2>No Results Found</h2>
       </div>
     );
 

@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useFavorites } from "../Components/context/FavoritesContext";
-import "./BookCard.css"; // external CSS import
+import "./BookCard.css";
 
 function BookCard({ book }) {
   const { favorites, addFavorite, removeFavorite } = useFavorites();

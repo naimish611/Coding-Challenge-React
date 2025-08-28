@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { fetchBookById } from "../Components/api/googleBooks";
 import { useFavorites } from "../Components/context/FavoritesContext";
-import "./BookDetails.css"; // external css
+import "./BookDetails.css";
 
 const BookDetails = () => {
   const { id } = useParams();

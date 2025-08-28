@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { searchBooks } from "../Components/api/googleBooks";
 import BookList from "../Components/BookList";
-import "./SearchForm.css"; // External CSS file
+import "./SearchForm.css";
 
 function SearchForm() {
   const [fields, setFields] = useState({ title: "", author: "", genre: "" });
@@ -16,7 +16,7 @@ function SearchForm() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Check if all fields are empty
+    
     const emptyFields = Object.keys(fields).filter((key) => !fields[key].trim());
     if (emptyFields.length === 3) {
       setError("Please enter at least one field.");
